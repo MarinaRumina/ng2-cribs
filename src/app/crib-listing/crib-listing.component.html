@@ -10,10 +10,21 @@
                     </select>
 
                 </div>
+
+                <div class="col-sm-4">
+                    <label for="sort-direction">Sort Direction</label>
+                    <div>
+                        <button class="btn btn-primary" [ngClass]="{'btn-success': sortDirection == 'asc'}" (click)="sortDirection = 'asc'">Asc</button>
+
+                        <button class="btn btn-primary" [ngClass]="{'btn-success': sortDirection == 'desc'}" (click)="sortDirection = 'desc'">Desc</button>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-    <div *ngFor="let crib of cribs | sortBy: [sortField]">
+    <div *ngFor="let crib of cribs | sortBy: [sortField, sortDirection]">
         <app-crib-card [crib]="crib" class="col-sm-4"></app-crib-card>
     </div>
 
