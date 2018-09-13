@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddListingFormComponent implements OnInit {
 
+  propertyTypes: Array<string> = ['Condo', 'House', 'Duplex'];
   constructor() { }
 
   ngOnInit() {
   }
 
+  onCribSubmit(data): void {
+    console.log(data);
+  }
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { CribsService } from './../services/cribs.service';
-import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-crib-listing',
